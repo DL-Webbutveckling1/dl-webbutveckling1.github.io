@@ -1,0 +1,23 @@
+body {
+  margin: 0;
+  background-color: white;
+}
+
+@media screen and (min-width: 800px) {
+  .top-navbar {
+    width: 100vw;
+    height: auto;
+
+    background-color: #00000010;
+
+    display: grid;
+    grid-template-columns: auto 10vw;
+
+    position: fixed;
+  }
+
+  .top-navbar-container {
+    display: flex;
+    flex-direction: row;
+  }
+}
