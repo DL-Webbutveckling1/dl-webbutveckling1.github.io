@@ -1,6 +1,12 @@
-/*body {
+:root {
+  --dark-color: #222222;
+  --dark-color-alt: #2A2A2A;
+}
+
+body {
   margin: 0;
   background-color: white;
+  font-family: Segoe UI,SegoeUI,"Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 @media screen and (min-width: 800px) {
@@ -8,16 +14,31 @@
     width: 100vw;
     height: auto;
 
-    background-color: #00000010;
+    background-color: var(--dark-color);
 
     display: grid;
-    grid-template-columns: auto 10vw;
+    grid-template-columns: 12rem auto;
 
-    position: fixed;
+    align-items: center;
+  }
+
+  .top-navbar img {
+    width: 100%;
+    height: auto;
   }
 
   .top-navbar-container {
     display: flex;
     flex-direction: row;
   }
-}*/
+
+  .top-navbar-container a {
+    padding: 0.5rem 1.2rem;
+    color: white;
+    text-decoration: none;
+  }
+
+  .top-navbar-container a:hover {
+    background-color: var(--dark-color-alt);
+  }
+}
