@@ -14,6 +14,8 @@ body {
   font-family: Segoe UI,SegoeUI,"Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
+/* Navbar */
+
 .top-navbar {
   width: 100%;
   height: auto;
@@ -24,6 +26,10 @@ body {
   align-items: center;
 
   grid-template-columns: 4em 0 auto;
+}
+
+.top-navbar-container a {
+  white-space: nowrap;
 }
 
 .top-navbar-logo-container {
@@ -55,11 +61,16 @@ body {
 }
 
 @media screen and (min-width: 800px) {
+  .active {
+    font-weight: bold;
+    font-size: 1.2em;
+  }
+
   .top-navbar {
     align-items: center;
     direction: rtl;
     justify-content: left;
-    grid-template-columns: 4em 0.35em auto;
+    grid-template-columns: 4rem 0.35rem auto;
   }
 
   .top-navbar-container {
@@ -72,7 +83,10 @@ body {
   }
 
   .top-navbar-container a {
-    padding: 0.5rem 1.2rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 1.2rem;
     color: white;
     text-decoration: none;
   }
@@ -94,8 +108,10 @@ body {
   }
 }
 
+/* Front Page Header */
+
 #front-page-header {
-  background-image: url("https://raw.githubusercontent.com/ArtemisDevGroup/Artemis-Resources/main/Background/Standard.jpg");
+  background-image: url("resources/img/Standard.jpg");
   background-position: center 20%;
   background-size: fill;
   background-repeat: no-repeat;
@@ -124,4 +140,50 @@ body {
   margin-block: 0;
 
   padding-bottom: 5%;
+}
+
+/* QNA */
+
+/* Contributors */
+
+.contributor-section {
+  display: grid;
+  grid-template-rows: auto auto;
+}
+
+.contributor-section h2 {
+  font-size: 2.5em;
+  justify-self: center;
+}
+
+.contributor-container {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contributor {
+  background-color: rgba(0, 0, 0, 0.1);
+  width: 15rem;
+  margin: 1rem;
+}
+
+.contributor img {
+  width: 75%;
+}
+
+.contributor .name {
+  font-size: 1.2em;
+}
+
+.contributor .role {
+  opacity: 0.8;
+  font-style: italic;
+}
+
+@media screen and (min-width: 800px) {
+  .contributor-container {
+    flex-direction: row;
+  }
 }
