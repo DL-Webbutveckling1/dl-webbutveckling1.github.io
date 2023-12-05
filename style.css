@@ -3,33 +3,72 @@
   --dark-color-alt: #2A2A2A;
 }
 
+@font-face {
+  font-family: Blanka;
+  src: url(resources/font/Blanka-Regular.otf);
+}
+
 body {
   margin: 0;
   background-color: white;
   font-family: Segoe UI,SegoeUI,"Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
+.top-navbar {
+  width: 100%;
+  height: auto;
+
+  background-color: var(--dark-color);
+  display: grid;
+
+  align-items: center;
+
+  grid-template-columns: 4em 0 auto;
+}
+
+.top-navbar-logo-container {
+  width: auto;
+  justify-self: right;
+
+  display: flex;
+  flex-direction: row;
+}
+
+.top-navbar-logo-container p {
+  font-weight: normal;
+  font-family: Blanka;
+  font-size: 3rem;
+  color: white;
+
+  margin: 0 1rem 1.2rem 0;
+  align-self: center;
+}
+
+.top-navbar-image-container {
+  width: 4rem;
+  padding: 0.5rem;
+}
+
+.top-navbar-image-container img {
+  width: 100%;
+  height: auto;
+}
+
 @media screen and (min-width: 800px) {
   .top-navbar {
-    width: 100vw;
-    height: auto;
-
-    background-color: var(--dark-color);
-
-    display: grid;
-    grid-template-columns: 12rem auto;
-
     align-items: center;
-  }
-
-  .top-navbar img {
-    width: 100%;
-    height: auto;
+    direction: rtl;
+    justify-content: left;
+    grid-template-columns: 4em 0.35em auto;
   }
 
   .top-navbar-container {
     display: flex;
     flex-direction: row;
+    direction: ltr;
+    align-items: center;
+
+    height: 100%;
   }
 
   .top-navbar-container a {
@@ -41,4 +80,48 @@ body {
   .top-navbar-container a:hover {
     background-color: var(--dark-color-alt);
   }
+
+  .top-navbar-divider {
+    justify-self: center;
+    width: 100%;
+    height: 60%;
+    background-color: white;
+    border-radius: 1rem;
+  }
+
+  .top-navbar-logo-container {
+    direction: ltr;
+  }
+}
+
+#front-page-header {
+  background-image: url("https://raw.githubusercontent.com/ArtemisDevGroup/Artemis-Resources/main/Background/Standard.jpg");
+  background-position: center 20%;
+  background-size: fill;
+  background-repeat: no-repeat;
+  background-color: black;
+
+  width: 100%;
+  height: auto; 
+}
+
+#front-page-header img {
+  display: block;
+  height: 30%;
+  margin: 0 auto;
+  padding-top: 6%;
+}
+
+#front-page-header h1 {
+  text-align: center;
+
+  color: white;
+
+  font-family: Blanka;
+  font-weight: normal;
+  font-size: 5em;
+
+  margin-block: 0;
+
+  padding-bottom: 5%;
 }
